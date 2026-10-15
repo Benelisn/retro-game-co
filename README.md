@@ -27,10 +27,10 @@ Retro Game Co. sells tested, cleaned, and graded used games for classic consoles
 
 | Week | Dates | Milestone | Key Features |
 |------|-------|-----------|--------------|
-| 1 | Oct 19 x Oct 23 | Foundation & Homepage | Folder structure, shared header/nav/footer, color theme in CSS, homepage hero and featured games, responsive layout |
-| 2 | Oct 26 x Oct 30 | Catalog & Product Detail | Product data file, catalog grid built from data, console filter and search, product detail page, About/Contact page |
-| 3 | Nov 2 x Nov 6 | Shopping Cart | Add to cart, cart page with quantity update and remove, subtotal/tax/total, cart count badge in header |
-| 4 | Nov 9 x Nov 13 | Checkout & Launch | Checkout form with validation, order confirmation page, accessibility review, testing, GitHub Pages launch |
+| 1 | Oct 18th | Foundation & Homepage | Folder structure, shared header/nav/footer, color theme in CSS, homepage hero and featured games, responsive layout |
+| 2 | Oct 25th | Catalog & Product Detail | Product data file, catalog grid built from data, console filter and search, product detail page, About/Contact page |
+| 3 | Nov 1st | Shopping Cart | Add to cart, cart page with quantity update and remove, subtotal/tax/total, cart count badge in header |
+| 4 | Nov 8th | Checkout & Launch | Checkout form with validation, order confirmation page, accessibility review, testing, GitHub Pages launch |
 
 ## Color Palette
 
