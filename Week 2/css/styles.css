@@ -1,0 +1,306 @@
+/*
+  Retro Game Co. - Main Stylesheet
+  Author: Joshua Farr
+  Date: November 2, 2026
+  Purpose: Brand theme and mobile-first responsive layout
+*/
+
+/* ===== BRAND THEME ===== */
+:root {
+  --navy: #1B1F3B;   /* text, header, footer */
+  --cream: #FDF8F0;  /* page background */
+  --red: #C1272D;    /* buttons, calls to action */
+  --gold: #FFC857;   /* badges, tags */
+  --teal: #0E7C7B;   /* links, hover */
+  --white: #FFFFFF;
+  --retro-font: "Press Start 2P", cursive;
+  --body-font: system-ui, Arial, sans-serif;
+}
+
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: var(--cream);
+  color: var(--navy);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+a {
+  color: var(--teal);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== HEADER & NAV ===== */
+.site-header {
+  background-color: var(--navy);
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  font-family: var(--retro-font);
+  font-size: 1rem;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.site-header ul {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.site-header nav a {
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background-color: var(--navy);
+  color: var(--cream);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  background-color: var(--red);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--navy);
+}
+
+.btn:disabled {
+  background-color: #6B6B6B;
+  cursor: not-allowed;
+}
+
+/* ===== HOMEPAGE HERO ===== */
+.hero {
+  background-color: var(--navy);
+  color: var(--cream);
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-family: var(--retro-font);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--gold);
+}
+
+/* ===== CONSOLE BUTTONS ===== */
+.console-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.console-btn {
+  display: block;
+  font-family: var(--retro-font);
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.console-btn:hover {
+  background-color: var(--navy);
+}
+
+/* ===== GAME GRID (mobile first) ===== */
+.game-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.game-card {
+  background-color: var(--white);
+  border: 2px solid var(--navy);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.game-card h3 {
+  margin: 0.5rem 0 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--navy);
+  font-weight: bold;
+  padding: 0.1rem 0.6rem;
+  border-radius: 4px;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--red);
+}
+
+/* ===== SHOP FILTERS & FORMS ===== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.field label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 0.5rem;
+  border: 2px solid var(--navy);
+  border-radius: 6px;
+}
+
+.contact-form {
+  max-width: 500px;
+}
+
+fieldset {
+  border: 2px solid var(--navy);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* ===== PRODUCT DETAIL ===== */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.product-detail dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+}
+
+.product-detail dt {
+  font-weight: bold;
+}
+
+.product-detail dd {
+  margin: 0;
+}
+
+/* ===== ABOUT: GRADING TABLE ===== */
+.grading-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grading-table caption {
+  text-align: left;
+  font-weight: bold;
+}
+
+.grading-table th,
+.grading-table td {
+  border: 1px solid var(--navy);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.grading-table th {
+  background-color: var(--navy);
+  color: var(--cream);
+}
+
+/* ===== CART SUMMARY ===== */
+.summary {
+  background-color: var(--white);
+  border: 2px solid var(--navy);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* ===== TABLET (768px and up) ===== */
+@media (min-width: 768px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-header ul {
+    margin: 0;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===== DESKTOP (1024px and up) ===== */
+@media (min-width: 1024px) {
+  .game-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}

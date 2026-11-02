@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+  Retro Game Co. - Checkout
+  Author: Joshua Farr 
+  Date: November 2, 2026
+  Course: SDC260
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Retro Game Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">Retro Game Co.</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html" aria-current="page">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Checkout</h1>
+    <p>Checkout form and validation are coming in Week 4.</p>
+
+    <form class="checkout-form" action="confirmation.html">
+      <fieldset>
+        <legend>Shipping Information</legend>
+        <p>Name, address, city, state, and ZIP fields go here.</p>
+      </fieldset>
+      <fieldset>
+        <legend>Payment (Simulated)</legend>
+        <p>Card fields go here. No real payments are processed.</p>
+      </fieldset>
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Retro Game Co. | Built by Joshua Farr</p>
+  </footer>
+</body>
+</html>

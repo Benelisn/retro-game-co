@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+  Retro Game Co. - Shop
+  Author: Joshua Farr 
+  Date: November 2, 2026
+  Course: SDC260
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Retro Game Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">Retro Game Co.</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" aria-current="page">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Shop All Games</h1>
+
+    <section class="filters" aria-label="Filter games">
+      <div class="field">
+        <label for="platform-filter">Console</label>
+        <select id="platform-filter">
+          <option value="All">All Consoles</option>
+          <option value="N64">N64</option>
+          <option value="PS1">PS1</option>
+          <option value="PS2">PS2</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="search-box">Search by title</label>
+        <input type="search" id="search-box" placeholder="e.g. Spyro">
+      </div>
+    </section>
+
+    <p id="result-count" aria-live="polite"></p>
+    <div id="shop-grid" class="game-grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Retro Game Co. | Built by Joshua Farr</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
