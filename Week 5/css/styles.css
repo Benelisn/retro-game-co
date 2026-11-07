@@ -503,7 +503,12 @@ fieldset {
 #clear-cart {
   margin-top: 0.75rem;
 }
-
+/* Keep every product photo the same shape */
+.game-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
 /* ===== WEEK 5: ACCESSIBILITY ===== */
 /* Hidden on screen but read by screen readers */
 .visually-hidden {
