@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+  Retro Game Co. - Home
+  Author: Joshua Farr 
+  Date: November 2, 2026 (updated November 7, 2026)
+  Course: SDC260
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Retro Game Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Retro Game Co.</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="network.html">Network</a></li>
+        <li><a href="cart.html">Cart <span class="cart-count">0</span><span class="visually-hidden"> items</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero">
+      <h1>Press Start on Your Childhood</h1>
+      <p>Used N64, PS1, and PS2 games. Tested, cleaned, and honestly graded.</p>
+      <a href="shop.html" class="btn">Shop All Games</a>
+    </section>
+
+    <section aria-labelledby="console-heading">
+      <h2 id="console-heading">Shop by Console</h2>
+      <ul class="console-list">
+        <li><a href="shop.html?platform=N64" class="console-btn">N64</a></li>
+        <li><a href="shop.html?platform=PS1" class="console-btn">PS1</a></li>
+        <li><a href="shop.html?platform=PS2" class="console-btn">PS2</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Games</h2>
+      <div id="featured-grid" class="game-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Retro Game Co. | Built by Joshua Farr</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

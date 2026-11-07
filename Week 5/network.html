@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+  Retro Game Co. - Network Connection Test
+  Author: Joshua Farr 
+  Date: November 7, 2026
+  Purpose: Shows the host name, port, protocol, and last launch time so I can
+           confirm the site is being served over a network (local or live)
+  Course: SDC260
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Test | Retro Game Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Retro Game Co.</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="network.html" aria-current="page">Network</a></li>
+        <li><a href="cart.html">Cart <span class="cart-count">0</span><span class="visually-hidden"> items</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero network-hero">
+      <h1 id="network-title">Checking Connection...</h1>
+      <p id="network-message">Running network test.</p>
+    </section>
+
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading">Connection Details</h2>
+      <dl class="network-grid">
+        <div class="network-item">
+          <dt>Local Host Name</dt>
+          <dd id="host-name">Detecting...</dd>
+        </div>
+        <div class="network-item">
+          <dt>Communication Port</dt>
+          <dd id="port-number">Detecting...</dd>
+        </div>
+        <div class="network-item">
+          <dt>Transmission Protocol</dt>
+          <dd id="protocol">Detecting...</dd>
+        </div>
+        <div class="network-item">
+          <dt>Last Time Launched</dt>
+          <dd id="last-launch">Detecting...</dd>
+        </div>
+      </dl>
+      <button type="button" class="btn" id="rerun-test">Run Test Again</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Retro Game Co. | Built by Joshua Farr</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/network.js"></script>
+</body>
+</html>

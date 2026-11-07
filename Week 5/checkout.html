@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--
+  Retro Game Co. - Checkout
+  Author: Joshua Farr 
+  Date: November 2, 2026 (updated November 7, 2026)
+  Course: SDC260
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Retro Game Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Retro Game Co.</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="network.html">Network</a></li>
+        <li><a href="cart.html" aria-current="page">Cart <span class="cart-count">0</span><span class="visually-hidden"> items</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <h1>Checkout</h1>
+    <p class="note">Fields marked <span class="req">*</span> are required. This is a class project, so no real payment is processed.</p>
+
+    <div class="checkout-layout">
+      <form id="checkout-form" class="checkout-form" novalidate>
+        <p id="form-message" class="form-message" role="alert"></p>
+
+        <fieldset>
+          <legend>Shipping Information</legend>
+          <div class="field">
+            <label for="ship-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="ship-name" name="ship-name" aria-required="true" aria-describedby="ship-name-error" autocomplete="name">
+            <p class="error" id="ship-name-error"></p>
+          </div>
+          <div class="field">
+            <label for="ship-street">Street Address <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="ship-street" name="ship-street" aria-required="true" aria-describedby="ship-street-error" autocomplete="street-address">
+            <p class="error" id="ship-street-error"></p>
+          </div>
+          <div class="field">
+            <label for="ship-city">City <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="ship-city" name="ship-city" aria-required="true" aria-describedby="ship-city-error" autocomplete="address-level2">
+            <p class="error" id="ship-city-error"></p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="ship-state">State <span class="req" aria-hidden="true">*</span></label>
+              <select id="ship-state" name="ship-state" aria-required="true" aria-describedby="ship-state-error">
+              <option value="">Select</option>
+              <option value="AL">AL</option>
+              <option value="AK">AK</option>
+              <option value="AZ">AZ</option>
+              <option value="AR">AR</option>
+              <option value="CA">CA</option>
+              <option value="CO">CO</option>
+              <option value="CT">CT</option>
+              <option value="DE">DE</option>
+              <option value="DC">DC</option>
+              <option value="FL">FL</option>
+              <option value="GA">GA</option>
+              <option value="HI">HI</option>
+              <option value="ID">ID</option>
+              <option value="IL">IL</option>
+              <option value="IN">IN</option>
+              <option value="IA">IA</option>
+              <option value="KS">KS</option>
+              <option value="KY">KY</option>
+              <option value="LA">LA</option>
+              <option value="ME">ME</option>
+              <option value="MD">MD</option>
+              <option value="MA">MA</option>
+              <option value="MI">MI</option>
+              <option value="MN">MN</option>
+              <option value="MS">MS</option>
+              <option value="MO">MO</option>
+              <option value="MT">MT</option>
+              <option value="NE">NE</option>
+              <option value="NV">NV</option>
+              <option value="NH">NH</option>
+              <option value="NJ">NJ</option>
+              <option value="NM">NM</option>
+              <option value="NY">NY</option>
+              <option value="NC">NC</option>
+              <option value="ND">ND</option>
+              <option value="OH">OH</option>
+              <option value="OK">OK</option>
+              <option value="OR">OR</option>
+              <option value="PA">PA</option>
+              <option value="RI">RI</option>
+              <option value="SC">SC</option>
+              <option value="SD">SD</option>
+              <option value="TN">TN</option>
+              <option value="TX">TX</option>
+              <option value="UT">UT</option>
+              <option value="VT">VT</option>
+              <option value="VA">VA</option>
+              <option value="WA">WA</option>
+              <option value="WV">WV</option>
+              <option value="WI">WI</option>
+              <option value="WY">WY</option>
+              </select>
+              <p class="error" id="ship-state-error"></p>
+            </div>
+          <div class="field">
+            <label for="ship-zip">ZIP Code <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="ship-zip" name="ship-zip" aria-required="true" aria-describedby="ship-zip-error" inputmode="numeric" autocomplete="postal-code" placeholder="23112">
+            <p class="error" id="ship-zip-error"></p>
+          </div>
+          </div>
+          <div class="field">
+            <label for="ship-phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="ship-phone" name="ship-phone" aria-required="true" aria-describedby="ship-phone-error" autocomplete="tel" placeholder="804-555-0123">
+            <p class="error" id="ship-phone-error"></p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment (Simulated)</legend>
+          <div class="field">
+            <label for="card-name">Cardholder Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="card-name" name="card-name" aria-required="true" aria-describedby="card-name-error" autocomplete="cc-name">
+            <p class="error" id="card-name-error"></p>
+          </div>
+          <div class="field">
+            <label for="card-number">Credit Card Number <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="card-number" name="card-number" aria-required="true" aria-describedby="card-number-error" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456">
+            <p class="error" id="card-number-error"></p>
+          </div>
+          <div class="field-row">
+          <div class="field">
+            <label for="card-exp">Expiration Date <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="card-exp" name="card-exp" aria-required="true" aria-describedby="card-exp-error" autocomplete="cc-exp" placeholder="MM/YY">
+            <p class="error" id="card-exp-error"></p>
+          </div>
+          <div class="field">
+            <label for="card-cvv">Security Code <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="card-cvv" name="card-cvv" aria-required="true" aria-describedby="card-cvv-error" inputmode="numeric" autocomplete="cc-csc" placeholder="123">
+            <p class="error" id="card-cvv-error"></p>
+          </div>
+          </div>
+          <div class="field">
+            <label for="coupon-code">Coupon Code <span class="optional">(optional)</span></label>
+            <div class="coupon-row">
+              <input type="text" id="coupon-code" name="coupon-code" aria-describedby="coupon-code-error">
+              <button type="button" id="apply-coupon" class="btn btn-outline">Apply</button>
+            </div>
+            <p class="error" id="coupon-code-error" aria-live="polite"></p>
+            <p class="success" id="coupon-message" aria-live="polite"></p>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn">Place Order</button>
+      </form>
+
+      <aside class="summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Order Summary</h2>
+        <div id="checkout-summary"></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Retro Game Co. | Built by Joshua Farr</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

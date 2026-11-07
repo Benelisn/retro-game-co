@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+  Retro Game Co. - About
+  Author: Joshua Farr
+  Date: November 2, 2026 (updated November 7, 2026)
+  Course: SDC260
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Retro Game Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Retro Game Co.</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="network.html">Network</a></li>
+        <li><a href="cart.html">Cart <span class="cart-count">0</span><span class="visually-hidden"> items</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <h1>About Retro Game Co.</h1>
+
+    <section aria-labelledby="story-heading">
+      <h2 id="story-heading">Our Story</h2>
+      <p>Retro Game Co. started with a love for the N64, PS1, and PS2 games we grew up with. Buying retro games online can be a gamble, so every game we sell is tested, cleaned, and given an honest condition grade before it is listed.</p>
+    </section>
+
+    <section aria-labelledby="grading-heading">
+      <h2 id="grading-heading">Condition Grading Guide</h2>
+      <table class="grading-table">
+        <caption>How we grade every game</caption>
+        <thead>
+          <tr>
+            <th scope="col">Grade</th>
+            <th scope="col">What It Means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Excellent</td>
+            <td>Looks almost new. Clean label or disc with little to no wear.</td>
+          </tr>
+          <tr>
+            <td>Good</td>
+            <td>Light wear such as small scratches or minor label scuffs. Plays perfectly.</td>
+          </tr>
+          <tr>
+            <td>Fair</td>
+            <td>Noticeable wear, torn label, or heavier scratches. Tested and fully working.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Loose</strong> means game only. <strong>CIB</strong> (complete in box) means the game comes with its original case and manual.</p>
+    </section>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Us</h2>
+      <form id="contact-form" class="contact-form" novalidate>
+        <p class="note">Fields marked <span class="req">*</span> are required.</p>
+        <p id="contact-message" class="form-message" role="alert"></p>
+        <div class="field">
+          <label for="full-name">Full Name <span class="optional">(optional)</span></label>
+          <input type="text" id="full-name" name="full-name" aria-describedby="full-name-error" autocomplete="name">
+          <p class="error" id="full-name-error"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" aria-required="true" aria-describedby="email-error" autocomplete="email">
+          <p class="error" id="email-error"></p>
+        </div>
+        <div class="field">
+          <label for="subject">Subject <span class="optional">(optional)</span></label>
+          <input type="text" id="subject" name="subject" aria-describedby="subject-error">
+          <p class="error" id="subject-error"></p>
+        </div>
+        <div class="field">
+          <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="5" aria-required="true" aria-describedby="message-error"></textarea>
+          <p class="error" id="message-error"></p>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Retro Game Co. | Built by Joshua Farr</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

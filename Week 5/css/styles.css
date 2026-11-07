@@ -1,0 +1,629 @@
+/*
+  Retro Game Co. - Main Stylesheet
+  Author: Joshua Farr
+  Date: November 2, 2026 (updated November 7, 2026)
+  Purpose: Brand theme and mobile-first responsive layout
+*/
+
+/* ===== BRAND THEME ===== */
+:root {
+  --navy: #1B1F3B;   /* text, header, footer */
+  --cream: #FDF8F0;  /* page background */
+  --red: #C1272D;    /* buttons, calls to action */
+  --gold: #FFC857;   /* badges, tags */
+  --teal: #0E7C7B;   /* links, hover */
+  --white: #FFFFFF;
+  --retro-font: "Press Start 2P", cursive;
+  --body-font: system-ui, Arial, sans-serif;
+}
+
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: var(--cream);
+  color: var(--navy);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+a {
+  color: var(--teal);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== HEADER & NAV ===== */
+.site-header {
+  background-color: var(--navy);
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  font-family: var(--retro-font);
+  font-size: 1rem;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.site-header ul {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+.site-header nav a {
+  white-space: nowrap;
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background-color: var(--navy);
+  color: var(--cream);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  background-color: var(--red);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--navy);
+}
+
+.btn:disabled {
+  background-color: #6B6B6B;
+  cursor: not-allowed;
+}
+
+/* ===== HOMEPAGE HERO ===== */
+.hero {
+  background-color: var(--navy);
+  color: var(--cream);
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-family: var(--retro-font);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--gold);
+}
+
+/* ===== CONSOLE BUTTONS ===== */
+.console-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.console-btn {
+  display: block;
+  font-family: var(--retro-font);
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.console-btn:hover {
+  background-color: var(--navy);
+}
+
+/* ===== GAME GRID (mobile first) ===== */
+.game-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.game-card {
+  background-color: var(--white);
+  border: 2px solid var(--navy);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.game-card h3 {
+  margin: 0.5rem 0 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--navy);
+  font-weight: bold;
+  padding: 0.1rem 0.6rem;
+  border-radius: 4px;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--red);
+}
+
+/* ===== SHOP FILTERS & FORMS ===== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.field label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 0.5rem;
+  border: 2px solid var(--navy);
+  border-radius: 6px;
+}
+
+.contact-form {
+  max-width: 500px;
+}
+
+fieldset {
+  min-width: 0;
+  border: 2px solid var(--navy);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* ===== PRODUCT DETAIL ===== */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.product-detail dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+}
+
+.product-detail dt {
+  font-weight: bold;
+}
+
+.product-detail dd {
+  margin: 0;
+}
+
+/* ===== ABOUT: GRADING TABLE ===== */
+.grading-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grading-table caption {
+  text-align: left;
+  font-weight: bold;
+}
+
+.grading-table th,
+.grading-table td {
+  border: 1px solid var(--navy);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.grading-table th {
+  background-color: var(--navy);
+  color: var(--cream);
+}
+
+/* ===== CART SUMMARY ===== */
+.summary {
+  background-color: var(--white);
+  border: 2px solid var(--navy);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* ===== WEEK 3: CARD BUTTONS & CART BADGE ===== */
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.btn-outline {
+  background-color: var(--white);
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+
+.btn-outline:hover {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.cart-count {
+  display: inline-block;
+  min-width: 1.5rem;
+  background-color: var(--gold);
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 0 0.4rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ===== WEEK 3: CART PAGE ===== */
+.cart-layout,
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  background-color: var(--white);
+  border: 2px solid var(--navy);
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.cart-row h3 {
+  margin: 0;
+}
+
+.cart-row p {
+  margin: 0.25rem 0;
+}
+
+.cart-controls {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qty-input {
+  width: 4.5rem;
+}
+
+.cart-row .price {
+  grid-column: 1 / -1;
+  text-align: right;
+}
+
+/* ===== WEEK 3: FORMS & VALIDATION ===== */
+.checkout-form {
+  max-width: 600px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-width: 0;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.coupon-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.coupon-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.req {
+  color: var(--red);
+}
+
+.optional,
+.note {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: var(--red);
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0;
+  min-height: 1rem;
+}
+
+[aria-invalid="true"] {
+  border-color: var(--red);
+  background-color: #FFF0F0;
+}
+
+.form-message:empty {
+  display: none;
+}
+
+.form-message {
+  color: var(--red);
+  font-weight: bold;
+  border: 2px solid var(--red);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+.form-message.success,
+.success {
+  color: var(--teal);
+  border-color: var(--teal);
+  font-weight: bold;
+}
+
+.success {
+  margin: 0.25rem 0 0;
+}
+
+/* ===== WEEK 3: ORDER SUMMARY ===== */
+.summary-list {
+  list-style: none;
+  padding: 0;
+  border-bottom: 2px solid var(--navy);
+}
+
+.summary-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.25rem 0;
+}
+
+.discount {
+  color: var(--teal);
+  font-weight: bold;
+}
+
+.summary .total {
+  font-size: 1.2rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ===== WEEK 4: INVENTORY ===== */
+.stock-count {
+  font-weight: bold;
+  color: var(--teal);
+}
+
+.stock-count.is-out {
+  color: var(--red);
+}
+
+/* Sold-out games are greyed out */
+.sold-out img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.sold-out h1,
+.sold-out h3,
+.sold-out .price {
+  opacity: 0.6;
+}
+
+.btn:disabled {
+  background-color: #8A8A8A;
+  border-color: #8A8A8A;
+  color: var(--white);
+  cursor: not-allowed;
+  /* Let the mouse pass through so the card can show the tooltip */
+  pointer-events: none;
+}
+
+/* Cursor tooltip for sold-out games */
+.stock-tooltip {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  background-color: var(--red);
+  color: var(--white);
+  font-weight: bold;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.stock-tooltip.show {
+  opacity: 1;
+}
+
+#clear-cart {
+  margin-top: 0.75rem;
+}
+
+/* ===== WEEK 5: ACCESSIBILITY ===== */
+/* Hidden on screen but read by screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link appears when a keyboard user tabs to it */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 2000;
+  background-color: var(--gold);
+  color: var(--navy);
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* ===== WEEK 5: NETWORK TEST PAGE ===== */
+.network-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.network-item {
+  background-color: var(--white);
+  border: 2px solid var(--navy);
+  border-left: 8px solid var(--teal);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.network-item dt {
+  font-weight: bold;
+}
+
+.network-item dd {
+  margin: 0.25rem 0 0;
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.network-offline .network-hero h1 {
+  color: #FF9A9E;
+}
+
+.network-offline .network-item {
+  border-left-color: var(--red);
+}
+
+/* ===== TABLET (768px and up) ===== */
+@media (min-width: 768px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-header ul {
+    margin: 0;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cart-row {
+    grid-template-columns: 90px 1fr auto auto;
+  }
+
+  .network-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cart-controls,
+  .cart-row .price {
+    grid-column: auto;
+  }
+}
+
+/* ===== DESKTOP (1024px and up) ===== */
+@media (min-width: 1024px) {
+  .game-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cart-layout,
+  .checkout-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .summary {
+    position: sticky;
+    top: 1rem;
+  }
+}
